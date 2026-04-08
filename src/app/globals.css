@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+@theme {
+  /* === FLYCOMM BRAND TOKENS === */
+  /* Brightened backgrounds for better contrast */
+  --color-bg: #0c1222;
+  --color-bg-elevated: #111b2e;
+  --color-bg-card: #182640;
+  --color-bg-card-hover: #1f3050;
+  --color-border: #2a4060;
+  --color-border-bright: #3d7ec0;
+
+  /* Text — brightened for better readability */
+  --color-text: #f8fafc;
+  --color-text-secondary: #b0bfd0;
+  --color-text-muted: #7a8da4;
+
+  /* Brand primary: electric blue */
+  --color-brand: #00a6f4;
+  --color-brand-light: #38bdf8;
+  --color-brand-dim: #0077b6;
+  --color-brand-bg: rgba(0, 166, 244, 0.12);
+  --color-brand-bg-hover: rgba(0, 166, 244, 0.2);
+
+  /* Brand accent: gold from the Flycomm logo dot */
+  --color-gold: #c9a84c;
+  --color-gold-dim: rgba(201, 168, 76, 0.2);
+
+  /* Semantic */
+  --color-danger: #ef4444;
+  --color-danger-dim: rgba(239, 68, 68, 0.12);
+  --color-success: #22c55e;
+  --color-accent: #818cf8;
+
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+/* =====================================================
+   BASE
+   ===================================================== */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+::selection {
+  background: rgba(0, 166, 244, 0.3);
+  color: #fff;
+}
+
+/* =====================================================
+   GRID / MESH BACKGROUNDS
+   ===================================================== */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(0, 166, 244, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 166, 244, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.bg-grid-fine {
+  background-image:
+    linear-gradient(rgba(0, 166, 244, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 166, 244, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.gradient-radial-tl {
+  background: radial-gradient(ellipse 60% 50% at 10% 20%, rgba(0, 166, 244, 0.15), transparent);
+}
+.gradient-radial-br {
+  background: radial-gradient(ellipse 50% 50% at 85% 75%, rgba(129, 140, 248, 0.1), transparent);
+}
+.gradient-radial-center {
+  background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(0, 166, 244, 0.12), transparent);
+}
+
+/* =====================================================
+   GLOW EFFECTS
+   ===================================================== */
+.glow {
+  box-shadow:
+    0 0 24px rgba(0, 166, 244, 0.12),
+    0 0 64px rgba(0, 166, 244, 0.04);
+}
+.glow-strong {
+  box-shadow:
+    0 0 30px rgba(0, 166, 244, 0.2),
+    0 0 80px rgba(0, 166, 244, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+}
+.glow-text {
+  text-shadow: 0 0 30px rgba(0, 166, 244, 0.4), 0 0 60px rgba(0, 166, 244, 0.15);
+}
+.glow-gold {
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.15), 0 0 50px rgba(201, 168, 76, 0.05);
+}
+
+/* =====================================================
+   CARD SYSTEM
+   ===================================================== */
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card:hover {
+  background: var(--color-bg-card-hover);
+  border-color: var(--color-border-bright);
+  box-shadow:
+    0 0 30px rgba(0, 166, 244, 0.15),
+    0 12px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.card-static {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+}
+
+/* =====================================================
+   DIVIDERS
+   ===================================================== */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border-bright), transparent);
+}
+
+/* =====================================================
+   BUTTON SYSTEM
+   ===================================================== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  background: var(--color-brand);
+  color: #fff;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary:hover {
+  background: var(--color-brand-light);
+  box-shadow: 0 0 24px rgba(0, 166, 244, 0.3);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  background: var(--color-bg-card);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  border-color: var(--color-brand);
+  background: var(--color-brand-bg);
+}
+
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.5; }
+  50%      { opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-fade-up    { animation: fade-up 0.6s ease both; }
+.animate-fade-in    { animation: fade-in 0.5s ease both; }
+.animate-pulse-soft { animation: pulse-soft 2.5s ease-in-out infinite; }
+.animate-float      { animation: float 6s ease-in-out infinite; }
+
+/* Staggered children */
+.stagger > * { animation: fade-up 0.5s ease both; }
+.stagger > *:nth-child(1) { animation-delay: 0ms; }
+.stagger > *:nth-child(2) { animation-delay: 80ms; }
+.stagger > *:nth-child(3) { animation-delay: 160ms; }
+.stagger > *:nth-child(4) { animation-delay: 240ms; }
+.stagger > *:nth-child(5) { animation-delay: 320ms; }
+.stagger > *:nth-child(6) { animation-delay: 400ms; }
+
+/* =====================================================
+   SCROLLBAR
+   ===================================================== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-border-bright); }
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+  .card:hover { transform: none; }
+}
