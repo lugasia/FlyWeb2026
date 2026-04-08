@@ -80,7 +80,7 @@ export default function DefensePage() {
             <div className="hidden lg:flex justify-center">
               <div className="relative">
                 <div className="w-56 h-56 rounded-2xl bg-bg-card border border-border flex items-center justify-center glow">
-                  <Image src="/icons/soc.png" alt="FlycommC2" width={140} height={140} className="opacity-80" />
+                  <Image src="/icons/soc.png" alt="FlycommC2" width={140} height={140} className="opacity-80 brightness-0 invert" />
                 </div>
                 <div className="absolute -bottom-3 -right-3 px-3 py-1.5 rounded-lg bg-danger-dim border border-danger/20 text-xs text-danger font-medium">
                   FlycommC2 SOC

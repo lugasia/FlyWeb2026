@@ -36,7 +36,7 @@ export default function SolutionsPage() {
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className={idx % 2 !== 0 ? "md:order-2" : ""}>
               <div className="flex items-center gap-4 mb-6">
-                <Image src={product.icon} alt="" width={52} height={52} className="h-13 w-13 rounded-xl object-contain" />
+                <Image src={product.icon} alt="" width={52} height={52} className="h-13 w-13 rounded-xl object-contain brightness-0 invert" />
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)]">
                     {product.title}
