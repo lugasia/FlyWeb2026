@@ -44,6 +44,7 @@ export const nav = [
       { label: "Regulators", href: "/#markets" },
     ],
   },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -322,6 +323,121 @@ export const testimonials = [
 ];
 
 // -- TRUSTED BY --
+
+// -- BLOG POSTS --
+// To add a new blog post:
+// 1. Add an image to /public/blog/
+// 2. Add a new entry below (newest first)
+// That's it — the homepage and /blog page will update automatically.
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string; // YYYY-MM-DD
+  author: string;
+  category: string;
+  image: string; // path in /public/blog/
+  externalUrl?: string; // link to original post on flycomm.co (optional)
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    slug: "tower-colocation",
+    title: "Should We Stay or Should We Move? The Art of Tower Colocation",
+    excerpt:
+      "Tower colocation strategy and decision-making — how data-driven insights help TowerCos optimize infrastructure sharing and maximize revenue.",
+    date: "2025-07-20",
+    author: "Noah Bell",
+    category: "Asset Management",
+    image: "/blog/tower-colocation.png",
+    externalUrl: "https://www.flycomm.co/blog/should-we-stay-or-should-we-move",
+  },
+  {
+    slug: "scaling-telecom-saas",
+    title: "Scaling Your Telecom Business: How All-in-One SaaS Solutions Drive Growth",
+    excerpt:
+      "Platform delivers 75% faster planning and slashes costs by half for network management. Learn how unified SaaS solutions are transforming telecom operations.",
+    date: "2025-05-12",
+    author: "Flycomm",
+    category: "Network Connectivity",
+    image: "/blog/scaling-telecom.jpg",
+    externalUrl:
+      "https://www.flycomm.co/blog/scaling-your-telecom-business-how-all-in-one-saas-solutions-drive-growth",
+  },
+  {
+    slug: "ai-network-planning-2025",
+    title: "The Future of Mobile Networks: Why AI-Driven Network Planning Will Dominate in 2025",
+    excerpt:
+      "AI-powered predictive analytics and automation are reshaping the telecom sector. Explore how AI-driven planning is replacing traditional approaches.",
+    date: "2025-02-12",
+    author: "Flycomm",
+    category: "Network Connectivity",
+    image: "/blog/ai-network-planning.png",
+    externalUrl:
+      "https://www.flycomm.co/blog/the-future-of-mobile-networks-why-ai-driven-network-planning-will-dominate-in-2025",
+  },
+  {
+    slug: "ai-in-telecommunications",
+    title: "AI in Telecommunications: Beyond the Buzzwords",
+    excerpt:
+      "Moving past the hype — real AI applications in predictive analytics, network optimization, and real-time monitoring that deliver measurable telecom results.",
+    date: "2024-12-09",
+    author: "Flycomm",
+    category: "Network Connectivity",
+    image: "/blog/ai-telecom.jpg",
+    externalUrl: "https://www.flycomm.co/blog/ai-in-telecommunications-beyond-the-buzzwords",
+  },
+  {
+    slug: "cellular-coverage-regulatory",
+    title:
+      "Visualizing Cellular Coverage: A Key Tool for Regulatory Agencies in Closing Access Gaps",
+    excerpt:
+      "How regulatory agencies leverage coverage visualization to enforce Universal Access obligations and close the digital divide.",
+    date: "2024-11-09",
+    author: "Noah Bell",
+    category: "Network Connectivity",
+    image: "/blog/cellular-coverage.png",
+    externalUrl:
+      "https://www.flycomm.co/blog/visualizing-cellular-coverage-a-key-tool-for-regulatory-agencies-in-closing-access-gaps",
+  },
+  {
+    slug: "colocation-flycomm",
+    title: "Enhancing Colocation Processes with Flycomm Solutions",
+    excerpt:
+      "A guide for TowerCos on leveraging data-driven insights for successful colocation revenue optimization and smarter infrastructure decisions.",
+    date: "2024-06-30",
+    author: "Noah Bell",
+    category: "Asset Management",
+    image: "/blog/colocation.png",
+    externalUrl:
+      "https://www.flycomm.co/blog/enhancing-colocation-processes-with-flycomm-solutions",
+  },
+  {
+    slug: "bts-vs-btf",
+    title:
+      "How Advanced Tools for Choosing Between Build to Suit (BTS) and Build to Fit (BTF) Strategies Empower TowerCos",
+    excerpt:
+      "AI-driven visualization tools enable TowerCos to select optimal network deployment approaches — BTS vs BTF analysis made simple.",
+    date: "2024-08-30",
+    author: "Noah Bell",
+    category: "Asset Management",
+    image: "/blog/colocation.png",
+    externalUrl: "https://www.flycomm.co/blog/bts-vs-btf-for-towercos",
+  },
+  {
+    slug: "future-of-5g",
+    title: "The Future of 5G and Its Implications for Businesses",
+    excerpt:
+      "Discover how 5G technology is revolutionizing business operations with faster speeds, lower latency, and enhanced connectivity for IoT and beyond.",
+    date: "2024-06-01",
+    author: "Flycomm",
+    category: "5G",
+    image: "/blog/ai-network-planning.png",
+    externalUrl:
+      "https://www.flycomm.co/blog/future-of-5g-and-its-implications-for-businesses",
+  },
+];
 
 export const trustedByLogos = [
   { name: "IHS", src: "/trusted/ihs.png" },
