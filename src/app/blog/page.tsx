@@ -31,11 +31,9 @@ export default function BlogPage() {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post) => (
-            <a
+            <Link
               key={post.slug}
-              href={post.externalUrl || `/blog/${post.slug}`}
-              target={post.externalUrl ? "_blank" : undefined}
-              rel={post.externalUrl ? "noopener noreferrer" : undefined}
+              href={`/blog/${post.slug}`}
               className="group card p-0 overflow-hidden flex flex-col cursor-pointer"
             >
               <div className="relative h-52 overflow-hidden">
@@ -73,7 +71,7 @@ export default function BlogPage() {
                   Read More <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </Section>

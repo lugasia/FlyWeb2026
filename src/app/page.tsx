@@ -319,9 +319,7 @@ export default function Home() {
           {blogPosts.slice(0, 3).map((post) => (
             <a
               key={post.slug}
-              href={post.externalUrl || `/blog/${post.slug}`}
-              target={post.externalUrl ? "_blank" : undefined}
-              rel={post.externalUrl ? "noopener noreferrer" : undefined}
+              href={`/blog/${post.slug}`}
               className="group card p-0 overflow-hidden flex flex-col cursor-pointer"
             >
               <div className="relative h-48 overflow-hidden">
