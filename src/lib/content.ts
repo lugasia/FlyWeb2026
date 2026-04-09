@@ -185,6 +185,7 @@ export interface Market {
   title: string;
   shortDesc: string;
   icon: string; // lucide name
+  image: string; // image path in /marketimg
   href: string;
   tags: string[];
 }
@@ -192,39 +193,23 @@ export interface Market {
 export const markets: Market[] = [
   {
     id: "mno",
-    title: "MNO & Telco",
+    title: "Telcos & MNOs",
     shortDesc:
       "Drive network ROI with coverage analytics, competitive benchmarking, and churn prevention.",
     icon: "Signal",
+    image: "/marketimg/Telcos and MNOs.png",
     href: "/telco",
     tags: ["Coverage optimization", "Churn reduction", "CAPEX planning"],
   },
   {
-    id: "towercos",
-    title: "Towercos & REITs",
-    shortDesc:
-      "Maximize tower portfolio value with data-driven site planning and tenant analytics.",
-    icon: "Building",
-    href: "/#markets",
-    tags: ["Site selection", "Tenant analytics", "Portfolio value"],
-  },
-  {
     id: "defense",
-    title: "Defense & HLS",
+    title: "Defense",
     shortDesc:
       "Spectrum awareness, RF threat detection, and assured connectivity for mission-critical operations.",
     icon: "ShieldCheck",
+    image: "/marketimg/Defense.png",
     href: "/defense",
     tags: ["Spectrum awareness", "Threat detection", "Digital twin"],
-  },
-  {
-    id: "regulators",
-    title: "Regulators",
-    shortDesc:
-      "Verify coverage obligations with independent, real-world measurement data.",
-    icon: "Scale",
-    href: "/#markets",
-    tags: ["Coverage verification", "Spectrum audit", "Compliance"],
   },
   {
     id: "smart-cities",
@@ -232,17 +217,9 @@ export const markets: Market[] = [
     shortDesc:
       "City-wide coverage intelligence, IoT readiness, and citizen transparency portals.",
     icon: "Landmark",
+    image: "/marketimg/Smart CIties.png",
     href: "/smart-cities",
     tags: ["Citizen portal", "IoT readiness", "MNO accountability"],
-  },
-  {
-    id: "ci",
-    title: "Critical Infrastructure",
-    shortDesc:
-      "Continuous RF monitoring for ports, airports, utilities, and logistics operations.",
-    icon: "Factory",
-    href: "/defense#ci",
-    tags: ["Multi-tech visibility", "Operational continuity", "Anomaly detection"],
   },
 ];
 

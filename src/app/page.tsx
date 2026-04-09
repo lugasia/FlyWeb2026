@@ -254,26 +254,34 @@ export default function Home() {
           description="Flycomm serves the full spectrum of wireless stakeholders."
         />
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 stagger">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 stagger">
           {markets.map((m) => (
             <Link
               key={m.id}
               href={m.href}
-              className="group card p-6 flex gap-4 cursor-pointer"
+              className="group card overflow-hidden cursor-pointer"
             >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-bg border border-brand-dim/20">
-                <Icon name={m.icon} className="h-5 w-5 text-brand" />
+              <div className="relative h-48 sm:h-56 overflow-hidden">
+                <img
+                  src={m.image}
+                  alt={m.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card)] via-transparent to-transparent" />
               </div>
-              <div>
-                <h3 className="text-base font-semibold mb-1 font-[family-name:var(--font-space-grotesk)]">{m.title}</h3>
+              <div className="p-6 pt-3">
+                <h3 className="text-lg font-semibold mb-2 font-[family-name:var(--font-space-grotesk)]">{m.title}</h3>
                 <p className="text-sm text-text-secondary leading-relaxed mb-3">{m.shortDesc}</p>
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-1.5 mb-3">
                   {m.tags.map((t) => (
                     <span key={t} className="text-[0.6875rem] px-2 py-0.5 rounded bg-bg-elevated border border-border text-text-muted">
                       {t}
                     </span>
                   ))}
                 </div>
+                <span className="inline-flex items-center gap-1.5 text-sm text-brand font-medium group-hover:gap-2.5 transition-all">
+                  Learn more <ChevronRight className="h-3.5 w-3.5" />
+                </span>
               </div>
             </Link>
           ))}
