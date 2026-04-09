@@ -101,8 +101,8 @@ export default function TelcoPage() {
             </div>
 
             <div className="hidden lg:flex justify-center">
-              <div className="w-56 h-56 rounded-2xl bg-bg-card border border-border flex items-center justify-center glow">
-                <Image src="/icons/flycomm-icon.png" alt="Flycomm Platform" width={120} height={120} className="opacity-80 brightness-0 invert" />
+              <div className="w-72 h-72 rounded-2xl overflow-hidden border border-border glow">
+                <img src="/marketimg/Telcos and MNOs.png" alt="Telcos & MNOs" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>

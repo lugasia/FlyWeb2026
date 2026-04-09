@@ -44,38 +44,47 @@ export default function SmartCitiesPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-brand-bg/30" />
 
         <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20 relative z-10">
-          <div className="max-w-2xl stagger">
-            <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-3.5 py-1.5 text-sm text-accent mb-6">
-              <Landmark className="h-4 w-4" />
-              Smart Cities & Municipalities
+          <div className="grid lg:grid-cols-[1fr_340px] gap-12 items-center">
+            <div className="max-w-2xl stagger">
+              <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-3.5 py-1.5 text-sm text-accent mb-6">
+                <Landmark className="h-4 w-4" />
+                Smart Cities & Municipalities
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.08] font-[family-name:var(--font-space-grotesk)] mb-6">
+                Build a <span className="text-accent">Connected City</span>
+              </h1>
+
+              <p className="text-lg text-text-secondary leading-relaxed mb-4">
+                Monitor citywide coverage, collaborate with mobile operators to close gaps,
+                and give citizens transparency into which provider works best at their address.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mt-8">
+                <Link href="#contact" className="btn-primary">
+                  Request Municipal Demo <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link href="#capabilities" className="btn-secondary">
+                  Explore Capabilities
+                </Link>
+              </div>
+
+              {/* Impact stats */}
+              <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6">
+                {metrics.map((m) => (
+                  <div key={m.label}>
+                    <div className="text-2xl md:text-3xl font-bold text-accent font-[family-name:var(--font-space-grotesk)]">{m.value}</div>
+                    <div className="text-sm text-text-muted mt-1">{m.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.08] font-[family-name:var(--font-space-grotesk)] mb-6">
-              Build a <span className="text-accent">Connected City</span>
-            </h1>
-
-            <p className="text-lg text-text-secondary leading-relaxed mb-4">
-              Monitor citywide coverage, collaborate with mobile operators to close gaps,
-              and give citizens transparency into which provider works best at their address.
-            </p>
-
-            <div className="flex flex-wrap gap-4 mt-8">
-              <Link href="#contact" className="btn-primary">
-                Request Municipal Demo <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link href="#capabilities" className="btn-secondary">
-                Explore Capabilities
-              </Link>
-            </div>
-
-            {/* Impact stats */}
-            <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6">
-              {metrics.map((m) => (
-                <div key={m.label}>
-                  <div className="text-2xl md:text-3xl font-bold text-accent font-[family-name:var(--font-space-grotesk)]">{m.value}</div>
-                  <div className="text-sm text-text-muted mt-1">{m.label}</div>
-                </div>
-              ))}
+            {/* Hero image */}
+            <div className="hidden lg:flex justify-center">
+              <div className="w-72 h-72 rounded-2xl overflow-hidden border border-border glow">
+                <img src="/marketimg/Smart CIties.png" alt="Smart Cities" className="w-full h-full object-cover" />
+              </div>
             </div>
           </div>
         </div>
