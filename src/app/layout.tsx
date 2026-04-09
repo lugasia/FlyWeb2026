@@ -9,7 +9,7 @@ const spaceGrotesk = Space_Grotesk({ variable: "--font-space-grotesk", subsets: 
 const jetbrainsMono = JetBrains_Mono({ variable: "--font-jetbrains-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Flycomm | See What Others Can't — AI-Powered Wireless Intelligence",
+  title: "Flycomm | AI-Powered Wireless Intelligence",
   description:
     "AI-powered digital twin for wireless intelligence. Real-world coverage analysis, spectrum awareness, anomaly detection, and churn prevention for MNOs, defense, and critical infrastructure.",
   keywords: [

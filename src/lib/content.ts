@@ -67,6 +67,7 @@ export interface Product {
   stats?: { value: string; label: string }[];
   color: string; // tailwind accent
   platformUrl?: string;
+  screenshot?: string;
 }
 
 export const products: Product[] = [
@@ -78,6 +79,7 @@ export const products: Product[] = [
     description:
       "Identify coverage gaps, benchmark against competitors, and link network quality directly to customer churn and revenue impact. Make investment decisions with data, not guesswork.",
     icon: "/icons/flycomm-icon.png",
+    screenshot: "/screenshots/cloud.png",
     features: [
       "Coverage gap identification with real-world measurements",
       "Competitive benchmarking down to street level",
@@ -105,6 +107,7 @@ export const products: Product[] = [
     description:
       "Real-time spectrum awareness, AI-powered anomaly detection, and automated threat response. Command and control for your RF environment — from rogue base stations to jamming detection.",
     icon: "/icons/soc.png",
+    screenshot: "/screenshots/soc.png",
     features: [
       "Real-time spectrum awareness & monitoring",
       "AI-powered anomaly & threat detection",
@@ -132,6 +135,7 @@ export const products: Product[] = [
     description:
       "Precision indoor coverage mapping, planning, and monitoring. Understand signal behavior inside buildings — floor by floor — with crowd-sourced data and AI modeling.",
     icon: "/icons/indoor.png",
+    screenshot: "/screenshots/indoor.png",
     features: [
       "Floor-by-floor coverage mapping",
       "DAS & small cell optimization",

@@ -107,30 +107,42 @@ export default function Home() {
             <Link
               key={p.id}
               href={`/solutions#${p.id}`}
-              className="group card p-7 flex flex-col cursor-pointer"
+              className="group card p-0 overflow-hidden flex flex-col cursor-pointer"
             >
-              <div className="flex items-center gap-4 mb-5">
-                <Image
-                  src={p.icon}
-                  alt={p.title}
-                  width={44}
-                  height={44}
-                  className="h-11 w-11 rounded-lg object-contain brightness-0 invert"
-                />
-                <div>
-                  <h3 className="text-lg font-semibold font-[family-name:var(--font-space-grotesk)]">
-                    {p.title}
-                  </h3>
-                  <span className="text-xs text-text-muted">{p.badge}</span>
+              <div className="p-7 flex flex-col flex-1">
+                <div className="flex items-center gap-4 mb-5">
+                  <Image
+                    src={p.icon}
+                    alt={p.title}
+                    width={44}
+                    height={44}
+                    className="h-11 w-11 rounded-lg object-contain brightness-0 invert"
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold font-[family-name:var(--font-space-grotesk)]">
+                      {p.title}
+                    </h3>
+                    <span className="text-xs text-text-muted">{p.badge}</span>
+                  </div>
                 </div>
+                <p className="text-sm text-text-secondary leading-relaxed mb-5 flex-1">
+                  {p.description}
+                </p>
+                {p.platformUrl && (
+                  <span className="inline-flex items-center gap-1.5 text-sm text-brand font-medium group-hover:gap-2.5 transition-all">
+                    Open Platform <ExternalLink className="h-3.5 w-3.5" />
+                  </span>
+                )}
               </div>
-              <p className="text-sm text-text-secondary leading-relaxed mb-5 flex-1">
-                {p.description}
-              </p>
-              {p.platformUrl && (
-                <span className="inline-flex items-center gap-1.5 text-sm text-brand font-medium group-hover:gap-2.5 transition-all">
-                  Open Platform <ExternalLink className="h-3.5 w-3.5" />
-                </span>
+              {p.screenshot && (
+                <div className="relative border-t border-white/10 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={p.screenshot}
+                    alt={`${p.title} dashboard`}
+                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
               )}
             </Link>
           ))}
