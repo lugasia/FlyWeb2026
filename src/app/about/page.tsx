@@ -52,10 +52,10 @@ const team = [
   },
   {
     name: "Eliran Oren",
-    role: "Chief Operating Officer",
+    role: "Co-Founder & COO",
     photo: "/team/eliran.png",
     linkedin: null,
-    desc: "Operations leader ensuring flawless delivery and scalability across Flycomm's platform, partnerships, and customer deployments worldwide.",
+    desc: "Co-Founder of FlyTech and Flycomm. Operations leader ensuring flawless delivery and scalability across Flycomm's platform, partnerships, and customer deployments worldwide.",
   },
   {
     name: "Yehuda Kohn",
