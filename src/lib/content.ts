@@ -44,6 +44,7 @@ export const nav = [
       { label: "Regulators", href: "/#markets" },
     ],
   },
+  { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/#contact" },
 ];

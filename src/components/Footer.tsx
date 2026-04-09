@@ -26,7 +26,7 @@ const sections = [
   {
     title: "Company",
     links: [
-      { label: "About", href: "/#about" },
+      { label: "About", href: "/about" },
       { label: "Contact", href: "/#contact" },
       { label: "Careers", href: "/#contact" },
     ],
