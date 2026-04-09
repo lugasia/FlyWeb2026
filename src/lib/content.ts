@@ -205,7 +205,7 @@ export const markets: Market[] = [
     shortDesc:
       "Maximize tower portfolio value with data-driven site planning and tenant analytics.",
     icon: "Building",
-    href: "/#markets",
+    href: "/towercos",
     tags: ["Site selection", "Tenant analytics", "Portfolio value"],
   },
   {
@@ -223,7 +223,7 @@ export const markets: Market[] = [
     shortDesc:
       "Verify coverage obligations with independent, real-world measurement data.",
     icon: "Scale",
-    href: "/#markets",
+    href: "/regulators",
     tags: ["Coverage verification", "Spectrum audit", "Compliance"],
   },
   {
@@ -241,7 +241,7 @@ export const markets: Market[] = [
     shortDesc:
       "Continuous RF monitoring for ports, airports, utilities, and logistics operations.",
     icon: "Factory",
-    href: "/defense#ci",
+    href: "/critical-infrastructure",
     tags: ["Multi-tech visibility", "Operational continuity", "Anomaly detection"],
   },
 ];
