@@ -16,7 +16,7 @@ export const brand = {
   platforms: {
     cloud: "https://cloud.flycomm.co",
     soc: "https://soc.flycomm.co",
-    indoor: "https://indoor.flycomm.co",
+    indoor: "https://indoor.flycomm.co/LandingPage",
   },
 };
 
@@ -149,7 +149,7 @@ export const products: Product[] = [
       "Multi-building portfolio management",
     ],
     color: "accent",
-    platformUrl: "https://indoor.flycomm.co",
+    platformUrl: "https://indoor.flycomm.co/LandingPage",
   },
   {
     id: "churn",
