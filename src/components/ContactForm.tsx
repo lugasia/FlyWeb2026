@@ -1,6 +1,6 @@
 "use client";
 import { useState, FormEvent } from "react";
-import { Send, Mail, MapPin, CheckCircle, AlertCircle } from "lucide-react";
+import { Send, Mail, MapPin, MessageCircle, CheckCircle, AlertCircle } from "lucide-react";
 import { Section, SectionHeader } from "./Section";
 import { brand } from "@/lib/content";
 
@@ -176,6 +176,10 @@ export function ContactForm() {
               <Mail className="h-4 w-4 text-brand" />
               {brand.email}
             </div>
+            <a href="https://wa.me/+972545359521" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-text-secondary hover:text-brand transition-colors">
+              <MessageCircle className="h-4 w-4 text-brand" />
+              WhatsApp
+            </a>
             <div className="flex items-center gap-3 text-sm text-text-secondary">
               <MapPin className="h-4 w-4 text-brand" />
               Global Operations

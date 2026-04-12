@@ -53,9 +53,9 @@ export default function SolutionsPage() {
               </p>
 
               <div className="flex flex-wrap gap-3 mb-6">
-                {product.platformUrl && (
+                {product.id === "indoor" && product.platformUrl && (
                   <a href={product.platformUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm">
-                    Open Platform <ExternalLink className="h-3.5 w-3.5" />
+                    Landing Page <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 )}
                 <Link href="/#contact" className="btn-secondary text-sm">
