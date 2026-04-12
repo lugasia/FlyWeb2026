@@ -131,7 +131,7 @@ export default function Home() {
                 </p>
                 {p.id === "indoor" && p.platformUrl && (
                   <span className="inline-flex items-center gap-1.5 text-sm text-brand font-medium group-hover:gap-2.5 transition-all">
-                    Landing Page <ExternalLink className="h-3.5 w-3.5" />
+                    See our Platform <ExternalLink className="h-3.5 w-3.5" />
                   </span>
                 )}
               </div>
