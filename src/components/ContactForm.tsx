@@ -172,14 +172,14 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-3 pl-1">
-            <div className="flex items-center gap-3 text-sm text-text-secondary">
-              <Mail className="h-4 w-4 text-brand" />
-              {brand.email}
-            </div>
             <a href="https://wa.me/+972545359521" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-text-secondary hover:text-brand transition-colors">
               <MessageCircle className="h-4 w-4 text-brand" />
               WhatsApp
             </a>
+            <div className="flex items-center gap-3 text-sm text-text-secondary">
+              <Mail className="h-4 w-4 text-brand" />
+              {brand.email}
+            </div>
             <div className="flex items-center gap-3 text-sm text-text-secondary">
               <MapPin className="h-4 w-4 text-brand" />
               Global Operations
