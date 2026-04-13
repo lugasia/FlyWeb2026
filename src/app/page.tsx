@@ -191,7 +191,7 @@ export default function Home() {
       <Section bg="gradient">
         <SectionHeader
           tag="Why Flycomm"
-          title="The accuracy of a Drive Test, The planning power of Simulation tools, With crowdsourced scalability"
+          title="The Accuracy of a Drive Test, The Planning Power of Simulation Tools, With Crowdsourced Scalability!"
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 stagger">
