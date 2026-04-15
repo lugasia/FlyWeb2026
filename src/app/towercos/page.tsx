@@ -8,8 +8,16 @@ import { Section, SectionHeader, SectionTag } from "@/components/Section";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Towercos & REITs | Flycomm — Maximize Tower Assets",
-  description: "AI-powered network intelligence to optimize tower portfolios, enhance tenant satisfaction, and drive new revenue streams.",
+  title: "Network Intelligence for TowerCos & REITs | Maximize Site Value & Colocation",
+  description:
+    "Unlock the full value of your infrastructure. Identify colocation opportunities, optimize site performance, and support data-driven leasing decisions with real-time network intelligence.",
+  alternates: { canonical: "/towercos" },
+  openGraph: {
+    title: "Network Intelligence for TowerCos & REITs | Maximize Site Value & Colocation",
+    description:
+      "Unlock the full value of your infrastructure. Identify colocation opportunities, optimize site performance, and support data-driven leasing decisions with real-time network intelligence.",
+    url: "/towercos",
+  },
 };
 
 const metrics = [

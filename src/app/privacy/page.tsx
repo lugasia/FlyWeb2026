@@ -3,8 +3,15 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Flycomm",
-  description: "Flycomm Networks App Privacy Policy — how we collect, use, and protect your personal information.",
+  title: "Privacy Policy",
+  description:
+    "Flycomm's privacy policy. Learn how we collect, use, and protect your data.",
+  alternates: { canonical: "/privacy" },
+  openGraph: {
+    title: "Privacy Policy",
+    description: "Flycomm's privacy policy. Learn how we collect, use, and protect your data.",
+    url: "/privacy",
+  },
 };
 
 export default function PrivacyPage() {

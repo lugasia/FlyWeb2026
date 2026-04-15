@@ -8,8 +8,16 @@ import { Section, SectionHeader, SectionTag } from "@/components/Section";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Regulators | Flycomm — Precision Oversight for Regulatory Network Intelligence",
-  description: "Empower regulators with AI-powered insights for total network transparency, spectrum management, and national security.",
+  title: "Network Visibility for Regulators | Independent Coverage & Performance Insights",
+  description:
+    "Gain independent, real-world visibility into network performance. Validate coverage, benchmark operators, and support data-driven regulatory decisions with AI-powered insights.",
+  alternates: { canonical: "/regulators" },
+  openGraph: {
+    title: "Network Visibility for Regulators | Independent Coverage & Performance Insights",
+    description:
+      "Gain independent, real-world visibility into network performance. Validate coverage, benchmark operators, and support data-driven regulatory decisions with AI-powered insights.",
+    url: "/regulators",
+  },
 };
 
 const pillars = [

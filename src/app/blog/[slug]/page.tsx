@@ -2,6 +2,8 @@ import Link from "next/link";
 import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/lib/content";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
@@ -17,8 +19,23 @@ export async function generateMetadata({
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return { title: "Post Not Found" };
   return {
-    title: `${post.title} | Flycomm Blog`,
+    title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${slug}` },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      url: `/blog/${slug}`,
+      publishedTime: post.date,
+      authors: [SITE_NAME],
+      section: post.category,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    },
   };
 }
 
@@ -39,6 +56,24 @@ export default async function BlogPostPage({
 
   return (
     <article className="min-h-screen">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: post.title,
+          description: post.excerpt,
+          image: `${SITE_URL}${post.image}`,
+          datePublished: post.date,
+          author: { "@type": "Person", name: post.author },
+          publisher: {
+            "@type": "Organization",
+            name: SITE_NAME,
+            url: SITE_URL,
+            logo: `${SITE_URL}/icons/flycomm-logo.png`,
+          },
+          mainEntityOfPage: `${SITE_URL}/blog/${slug}`,
+        }}
+      />
       {/* Hero Banner */}
       <div className="relative h-[340px] md:h-[420px] overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}

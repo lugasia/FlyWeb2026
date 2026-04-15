@@ -8,8 +8,16 @@ import { Section, SectionHeader, SectionTag } from "@/components/Section";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Smart Cities | Flycomm — Build a Connected City",
-  description: "City-wide coverage intelligence, IoT readiness, citizen transparency portals, and MNO accountability.",
+  title: "Connectivity Intelligence for Smart Cities | Optimize Urban Networks in Real Time",
+  description:
+    "Power smarter cities with real-time connectivity insights. Monitor coverage, optimize urban infrastructure, and support IoT, mobility, and public services with AI-driven network intelligence.",
+  alternates: { canonical: "/smart-cities" },
+  openGraph: {
+    title: "Connectivity Intelligence for Smart Cities | Optimize Urban Networks in Real Time",
+    description:
+      "Power smarter cities with real-time connectivity insights. Monitor coverage, optimize urban infrastructure, and support IoT, mobility, and public services with AI-driven network intelligence.",
+    url: "/smart-cities",
+  },
 };
 
 const capabilities = [

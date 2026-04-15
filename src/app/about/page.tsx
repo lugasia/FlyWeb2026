@@ -5,9 +5,16 @@ import { TeamPhoto } from "@/components/TeamPhoto";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | Flycomm — AI-Powered Wireless Intelligence",
+  title: "About Flycomm",
   description:
-    "Meet the team behind Flycomm. We simplify wireless communication by bringing clarity through AI-driven network intelligence.",
+    "Meet the team behind Flycomm. We build AI-powered wireless intelligence for telecom operators, defense, and critical infrastructure.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Flycomm",
+    description:
+      "Meet the team behind Flycomm. We build AI-powered wireless intelligence for telecom operators, defense, and critical infrastructure.",
+    url: "/about",
+  },
 };
 
 const values = [

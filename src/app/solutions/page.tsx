@@ -4,16 +4,49 @@ import Image from "next/image";
 import { ArrowRight, CheckCircle2, ExternalLink } from "lucide-react";
 import { Section, SectionHeader, SectionTag } from "@/components/Section";
 import { ContactForm } from "@/components/ContactForm";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/seo";
 import { products } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Solutions | Flycomm",
-  description: "Explore Flycomm's modular solutions: Cloud Platform, FlycommC2 SOC, Indoor Intelligence, and Churn Prevention.",
+  title: "AI-Powered Wireless Intelligence Solutions",
+  description:
+    "Explore Flycomm's suite of AI-powered wireless intelligence products for coverage analysis, spectrum awareness, anomaly detection, and network optimization.",
+  alternates: { canonical: "/solutions" },
+  openGraph: {
+    title: "AI-Powered Wireless Intelligence Solutions",
+    description:
+      "Explore Flycomm's suite of AI-powered wireless intelligence products for coverage analysis, spectrum awareness, anomaly detection, and network optimization.",
+    url: "/solutions",
+  },
 };
 
 export default function SolutionsPage() {
   return (
     <>
+      {products.map((product) => (
+        <JsonLd
+          key={product.id}
+          data={{
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: product.title,
+            description: product.description,
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            url: product.platformUrl ?? `${SITE_URL}/solutions#${product.id}`,
+            offers: {
+              "@type": "Offer",
+              category: "SaaS",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Flycomm",
+              url: SITE_URL,
+            },
+          }}
+        />
+      ))}
       {/* Hero */}
       <section className="relative pt-28 pb-16 bg-grid overflow-hidden">
         <div className="absolute inset-0 gradient-radial-tl" />

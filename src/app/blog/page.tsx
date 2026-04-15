@@ -5,9 +5,16 @@ import { blogPosts } from "@/lib/content";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Flycomm — Wireless Intelligence Insights",
+  title: "Blog",
   description:
-    "Industry analysis, product updates, and wireless intelligence thought leadership from the Flycomm team.",
+    "Insights on AI-powered wireless intelligence, telecom network optimization, and connectivity trends from the Flycomm team.",
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Blog",
+    description:
+      "Insights on AI-powered wireless intelligence, telecom network optimization, and connectivity trends from the Flycomm team.",
+    url: "/blog",
+  },
 };
 
 export default function BlogPage() {

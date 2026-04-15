@@ -9,8 +9,16 @@ import { Section, SectionHeader, SectionTag } from "@/components/Section";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "MNO & Telco | Flycomm — Turn Network Data Into Revenue",
-  description: "AI-powered coverage analytics, competitive benchmarking, and churn prevention for mobile operators.",
+  title: "AI Network Intelligence for MNOs & Telcos | Planning, Optimization & Churn Reduction",
+  description:
+    "Gain real-time visibility into your network. Optimize coverage, reduce infrastructure costs, and prevent churn with AI-driven network intelligence.",
+  alternates: { canonical: "/telco" },
+  openGraph: {
+    title: "AI Network Intelligence for MNOs & Telcos | Planning, Optimization & Churn Reduction",
+    description:
+      "Gain real-time visibility into your network. Optimize coverage, reduce infrastructure costs, and prevent churn with AI-driven network intelligence.",
+    url: "/telco",
+  },
 };
 
 const metrics = [

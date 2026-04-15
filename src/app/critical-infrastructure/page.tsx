@@ -8,8 +8,16 @@ import { Section, SectionHeader, SectionTag } from "@/components/Section";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Critical Infrastructure | Flycomm — Ensure Uninterrupted Connectivity",
-  description: "AI-driven network intelligence for ports, airports, utilities, and logistics — ensuring reliable communications for mission-critical systems.",
+  title: "Reliable Connectivity for Critical Infrastructure | Real-Time Network Intelligence",
+  description:
+    "Ensure reliable connectivity across critical infrastructure. Monitor network performance, detect coverage gaps, and support resilient operations with real-time AI-driven insights.",
+  alternates: { canonical: "/critical-infrastructure" },
+  openGraph: {
+    title: "Reliable Connectivity for Critical Infrastructure | Real-Time Network Intelligence",
+    description:
+      "Ensure reliable connectivity across critical infrastructure. Monitor network performance, detect coverage gaps, and support resilient operations with real-time AI-driven insights.",
+    url: "/critical-infrastructure",
+  },
 };
 
 const pillars = [

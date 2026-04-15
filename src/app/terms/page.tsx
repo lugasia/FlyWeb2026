@@ -3,8 +3,15 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Flycomm",
-  description: "Flycomm Networks App Terms and Conditions for use of the platform and services.",
+  title: "Terms of Service",
+  description:
+    "Flycomm's terms of service for using our website and products.",
+  alternates: { canonical: "/terms" },
+  openGraph: {
+    title: "Terms of Service",
+    description: "Flycomm's terms of service for using our website and products.",
+    url: "/terms",
+  },
 };
 
 export default function TermsPage() {

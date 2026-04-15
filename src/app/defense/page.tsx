@@ -9,8 +9,16 @@ import { Section, SectionHeader, SectionTag } from "@/components/Section";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Defense & HLS | Flycomm — Spectrum Dominance Through Intelligence",
-  description: "Real-time spectrum awareness, anomaly detection, and assured connectivity for mission-critical operations.",
+  title: "Mission-Critical Network Intelligence for Defense & HLS | Real-Time Connectivity Insights",
+  description:
+    "Ensure reliable connectivity in mission-critical environments. Gain real-time visibility, optimize coverage, and support secure defense and homeland security operations with AI-driven network intelligence.",
+  alternates: { canonical: "/defense" },
+  openGraph: {
+    title: "Mission-Critical Network Intelligence for Defense & HLS | Real-Time Connectivity Insights",
+    description:
+      "Ensure reliable connectivity in mission-critical environments. Gain real-time visibility, optimize coverage, and support secure defense and homeland security operations with AI-driven network intelligence.",
+    url: "/defense",
+  },
 };
 
 const capabilities = [

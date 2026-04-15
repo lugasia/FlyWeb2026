@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Play, ChevronRight, ExternalLink } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: { absolute: "Flycomm | AI Network Intelligence" },
+  description:
+    "AI-powered network intelligence for planning, optimization, and real-world connectivity insights.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Flycomm | AI Network Intelligence",
+    description:
+      "AI-powered network intelligence for planning, optimization, and real-world connectivity insights.",
+    url: "/",
+  },
+};
 import { Section, SectionHeader, SectionTag } from "@/components/Section";
 import { Icon } from "@/components/Icons";
 import { HeroVisual } from "@/components/HeroVisual";
