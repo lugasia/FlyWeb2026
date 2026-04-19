@@ -24,6 +24,42 @@ interface ContactPayload {
   company: string;
   market: string;
   message: string;
+  website?: string; // honeypot field — should always be empty
+}
+
+// --- Spam detection helpers ---
+
+/** Honeypot: bots fill this hidden field, real users never see it */
+function isHoneypotFilled(value?: string): boolean {
+  return !!value && value.trim().length > 0;
+}
+
+/** Check if a string looks like gibberish (no spaces, random chars) */
+function looksLikeGibberish(text: string): boolean {
+  const trimmed = text.trim();
+  // Very short inputs are fine (e.g. "Li Wei", "IBM")
+  if (trimmed.length < 6) return false;
+  // Real names/companies have spaces or hyphens or dots
+  const hasWordSeparator = /[\s\-.]/.test(trimmed);
+  // Ratio of uppercase to total chars — gibberish often mixes case randomly
+  const uppercaseRatio = (trimmed.match(/[A-Z]/g) || []).length / trimmed.length;
+  const hasExcessiveMixedCase = uppercaseRatio > 0.3 && uppercaseRatio < 0.9 && trimmed.length > 8;
+  // Consonant clusters — long runs without vowels are a red flag
+  const hasLongConsonantCluster = /[bcdfghjklmnpqrstvwxyz]{5,}/i.test(trimmed);
+
+  if (!hasWordSeparator && trimmed.length > 12) return true;
+  if (hasExcessiveMixedCase && !hasWordSeparator) return true;
+  if (hasLongConsonantCluster) return true;
+  return false;
+}
+
+/** Check for suspicious email patterns */
+function isSuspiciousEmail(email: string): boolean {
+  // Emails with excessive dots in the local part (used to bypass filters)
+  const localPart = email.split("@")[0] || "";
+  const dotCount = (localPart.match(/\./g) || []).length;
+  if (dotCount >= 5) return true;
+  return false;
 }
 
 export async function POST(request: Request) {
@@ -41,6 +77,22 @@ export async function POST(request: Request) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(body.email)) {
       return Response.json({ error: "Invalid email address." }, { status: 400 });
+    }
+
+    // --- Spam checks (return 200 to not tip off bots) ---
+    if (isHoneypotFilled(body.website)) {
+      console.log("🚫 SPAM (honeypot):", body.name, body.email);
+      return Response.json({ success: true }); // silent reject
+    }
+
+    if (looksLikeGibberish(body.name) || looksLikeGibberish(body.company)) {
+      console.log("🚫 SPAM (gibberish):", body.name, body.company, body.email);
+      return Response.json({ success: true }); // silent reject
+    }
+
+    if (isSuspiciousEmail(body.email)) {
+      console.log("🚫 SPAM (suspicious email):", body.email);
+      return Response.json({ success: true }); // silent reject
     }
 
     const timestamp = new Date().toISOString();

@@ -22,6 +22,7 @@ export function ContactForm() {
       company: (form.elements.namedItem("company") as HTMLInputElement).value,
       market: (form.elements.namedItem("market") as HTMLSelectElement).value,
       message: (form.elements.namedItem("msg") as HTMLTextAreaElement).value,
+      website: (form.elements.namedItem("website") as HTMLInputElement).value,
     };
 
     try {
@@ -72,6 +73,12 @@ export function ContactForm() {
           </div>
         ) : (
           <form className="space-y-5" onSubmit={handleSubmit}>
+            {/* Honeypot — hidden from real users, bots auto-fill it */}
+            <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px", opacity: 0, height: 0, overflow: "hidden" }}>
+              <label htmlFor="website">Website</label>
+              <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+            </div>
+
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
                 <label htmlFor="name" className="block text-sm text-text-secondary mb-1.5">Full Name</label>
