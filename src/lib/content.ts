@@ -8,7 +8,7 @@ export const brand = {
   tagline: "See What Others Can't",
   subtitle: "AI-Powered Wireless Intelligence",
   description:
-    "Real-world wireless intelligence that reveals coverage gaps, detects anomalies, and transforms spectrum data into strategic advantage.",
+    "Real-world wireless intelligence that reveals the true customer experience, uncovers coverage gaps and anomalies, and transforms raw data into strategic advantage.",
   fullDescription:
     "The accuracy of a Drive Test. The scale of Simulation. The intelligence of AI. All in one platform — deployed in under an hour, zero core integration.",
   email: "sales@flycomm.co",
