@@ -250,9 +250,14 @@ export const markets: Market[] = [
 
 export const platformStack = [
   {
-    layer: "Insights & Decisions",
-    desc: "Actionable recommendations with clear ROI projections",
-    icon: "Lightbulb",
+    layer: "Real-World Data Collection",
+    desc: "Actual field measurements — devices, vehicles, drones, sensors",
+    icon: "Radio",
+  },
+  {
+    layer: "Digital Twin Creation",
+    desc: "Living model of your wireless environment, continuously updated",
+    icon: "Box",
   },
   {
     layer: "AI Analysis",
@@ -260,14 +265,9 @@ export const platformStack = [
     icon: "Brain",
   },
   {
-    layer: "Digital Twin",
-    desc: "Living model of your wireless environment, continuously updated",
-    icon: "Box",
-  },
-  {
-    layer: "Real-World Data",
-    desc: "Actual field measurements — devices, vehicles, drones, sensors",
-    icon: "Radio",
+    layer: "Insights & Decision Making",
+    desc: "Actionable recommendations with clear ROI projections",
+    icon: "Lightbulb",
   },
 ];
 
