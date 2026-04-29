@@ -84,7 +84,7 @@ export const products: Product[] = [
     screenshot: "/screenshots/cloud.png",
     features: [
       "Coverage gap identification with real-world measurements",
-      "Competitive benchmarking down to street level",
+      "Competitive benchmarking down to a 10-meter bin",
       "Churn prediction linked to network quality",
       "ROI-driven investment prioritization",
       "Indoor & outdoor coverage analysis",
@@ -140,9 +140,9 @@ export const products: Product[] = [
     screenshot: "/screenshots/indoor.png",
     features: [
       "Floor-by-floor coverage mapping",
-      "DAS & small cell optimization",
-      "Crowd-sourced indoor measurements",
-      "Building penetration modeling",
+      "Performance Reporting",
+      "Planning & Optimization",
+      "Material penetration modeling",
       "Tenant experience scoring",
       "Indoor-outdoor handover analysis",
       "Automated report generation",
@@ -289,7 +289,7 @@ export const differentiators = [
   {
     title: "Instant Deployment",
     subtitle: "Zero integration",
-    desc: "No network changes required. Upload data and see results immediately. Value on day one.",
+    desc: "Just sign up, set up your project, and start seeing actionable insights. Value on day one.",
     icon: "Zap",
   },
   {
