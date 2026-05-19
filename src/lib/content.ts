@@ -30,6 +30,7 @@ export const nav = [
       { label: "FlycommC2 / SOC", href: "/solutions#soc" },
       { label: "Indoor Intelligence", href: "/solutions#indoor" },
       { label: "Churn Prevention", href: "/solutions#churn" },
+      { label: "App: Internet Speed Test by Flycomm", href: "/app" },
     ],
   },
   {
