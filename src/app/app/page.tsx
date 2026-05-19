@@ -212,9 +212,16 @@ export default function AppPage() {
                 href={playStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                aria-label="Get it on Google Play"
+                className="inline-block transition-opacity hover:opacity-90"
               >
-                Get the App on Google Play <ArrowRight className="h-4 w-4" />
+                <Image
+                  src="/screenshots/GooglePlay.png"
+                  alt="Get it on Google Play"
+                  width={646}
+                  height={200}
+                  className="h-14 w-auto"
+                />
               </a>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
