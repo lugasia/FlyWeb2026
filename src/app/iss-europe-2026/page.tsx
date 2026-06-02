@@ -140,8 +140,8 @@ export default function IssEurope2026Page() {
               </div>
             </div>
 
-            <div className="hidden lg:flex justify-center">
-              <div className="w-full aspect-square rounded-2xl overflow-hidden border border-border glow">
+            <div className="flex justify-center">
+              <div className="w-full max-w-md lg:max-w-none aspect-square rounded-2xl overflow-hidden border border-border glow">
                 <img src="/iss/coverage-polygon.png" alt="ECGI coverage footprint — cellular planning polygon" className="w-full h-full object-cover" />
               </div>
             </div>
