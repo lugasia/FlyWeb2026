@@ -1,10 +1,16 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const alt = "Flycomm — AI-Powered Network Intelligence";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
+  // Embed the real Flycomm logo (white variant) so shared links show the brand mark.
+  const logo = await readFile(join(process.cwd(), "public/icons/flycomm-logo-white.png"));
+  const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -19,37 +25,17 @@ export default async function Image() {
           fontFamily: "sans-serif",
         }}
       >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={logoSrc}
+          alt="Flycomm"
+          width={520}
+          height={113}
+          style={{ marginBottom: "36px" }}
+        />
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "16px",
-            marginBottom: "24px",
-          }}
-        >
-          <div
-            style={{
-              width: "64px",
-              height: "64px",
-              borderRadius: "16px",
-              background: "linear-gradient(135deg, #00a6f4, #0077b6)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "32px",
-              fontWeight: 700,
-              color: "#ffffff",
-            }}
-          >
-            F
-          </div>
-          <div style={{ fontSize: 56, fontWeight: 700, color: "#ffffff" }}>
-            Flycomm
-          </div>
-        </div>
-        <div
-          style={{
-            fontSize: 28,
+            fontSize: 30,
             color: "#00a6f4",
             fontWeight: 600,
             marginBottom: "12px",
@@ -58,13 +44,13 @@ export default async function Image() {
           AI-Powered Network Intelligence
         </div>
         <div style={{ fontSize: 20, color: "#8899aa" }}>
-          See What Others Can't
+          See What Others Can&apos;t
         </div>
         <div
           style={{
             display: "flex",
             gap: "32px",
-            marginTop: "40px",
+            marginTop: "44px",
           }}
         >
           {["94% Accuracy", "<1hr Deploy", "3x ROI"].map((stat) => (
