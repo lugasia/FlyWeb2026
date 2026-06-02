@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/api/",
+      disallow: ["/api/", "/iss-europe-2026"],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
   };

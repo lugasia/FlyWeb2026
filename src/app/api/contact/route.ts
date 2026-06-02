@@ -25,6 +25,7 @@ interface ContactPayload {
   market: string;
   message: string;
   website?: string; // honeypot field — should always be empty
+  source?: string;  // campaign / page tag (e.g. "ISS Europe 2026")
 }
 
 // --- Spam detection helpers ---
@@ -112,7 +113,7 @@ export async function POST(request: Request) {
       from: `"Flycomm Website" <${process.env.SMTP_USER || "noreply@flycomm.co"}>`,
       to: RECIPIENTS.join(", "),
       replyTo: body.email,
-      subject: `New Lead: ${body.name} — ${body.company}`,
+      subject: `New Lead${body.source ? ` [${body.source}]` : ""}: ${body.name} — ${body.company}`,
       html: `
         <div style="font-family:sans-serif;max-width:600px;">
           <h2 style="color:#0c1222;border-bottom:2px solid #00a6f4;padding-bottom:10px;">
@@ -138,6 +139,10 @@ export async function POST(request: Request) {
             <tr style="background:#f8f9fa;">
               <td style="padding:10px 14px;font-weight:bold;color:#333;">Message</td>
               <td style="padding:10px 14px;color:#555;">${body.message || "—"}</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 14px;font-weight:bold;color:#333;">Source</td>
+              <td style="padding:10px 14px;color:#555;">${body.source || "Website"}</td>
             </tr>
           </table>
           <p style="color:#999;font-size:12px;">Submitted via flycomm.co · ${timestamp}</p>
