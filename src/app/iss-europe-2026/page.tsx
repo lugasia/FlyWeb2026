@@ -8,9 +8,9 @@ import { Section, SectionHeader } from "@/components/Section";
 import { EarlyBirdForm } from "./EarlyBirdForm";
 
 export const metadata: Metadata = {
-  title: "ECGI Coverage API — Cell / Sector Footprint, On Demand | ISS Europe 2026",
+  title: "ECGI Coverage API — Cell / Sector Footprint, On Demand | Flycomm",
   description:
-    "Productizing RF intelligence. Polygon queries, pay-per-match, GeoJSON + H3 output. Claim 50% early-bird access to the Flycomm ECGI Coverage API — exclusive to ISS World Europe 2026 attendees.",
+    "Productizing RF intelligence. Polygon queries, pay-per-match, GeoJSON + H3 output. Claim 50% early-bird access to the Flycomm ECGI Coverage API — limited-time pricing through 30 June 2026.",
   // Hidden campaign page — must not be indexed or followed.
   robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
   alternates: { canonical: "/iss-europe-2026" },
@@ -105,7 +105,7 @@ export default function IssEurope2026Page() {
             <div className="max-w-2xl stagger">
               <div className="inline-flex items-center gap-2 rounded-full bg-gold/10 border border-gold-dim px-3.5 py-1.5 text-sm text-gold mb-6">
                 <MapPin className="h-4 w-4" />
-                ISS World Europe 2026 · Prague · Exclusive Early-Bird
+                Limited-Time Early-Bird · 50% Off Through June 2026
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.08] font-[family-name:var(--font-space-grotesk)] mb-6">
@@ -256,9 +256,9 @@ export default function IssEurope2026Page() {
       {/* 5. Pricing & Early-Bird */}
       <Section id="pricing" bg="grid">
         <SectionHeader
-          tag="ISS Europe 2026 Exclusive"
-          title="50% Early-Bird — ISS Attendees Only"
-          description="Annual batch tiers, priced per ECGI-match volume. Lock in early-bird pricing at the booth — 50% off list for ISS World Europe attendees."
+          tag="Limited-Time Offer"
+          title="50% Early-Bird — Through June 2026"
+          description="Annual batch tiers, priced per ECGI-match volume. Lock in early-bird pricing — 50% off list through 30 June 2026."
         />
         <div className="grid gap-6 md:grid-cols-3 items-stretch max-w-5xl mx-auto">
           {tiers.map((t) => (
@@ -299,8 +299,8 @@ export default function IssEurope2026Page() {
           ))}
         </div>
         <p className="mt-8 max-w-3xl mx-auto text-center text-xs text-text-muted leading-relaxed">
-          Early-bird pricing is exclusive to ISS World Europe 2026 attendees and valid for a limited
-          time. Prepaid annual credits; overage billed per match. Software / API license.
+          Early-bird pricing is a limited-time offer, valid through 30 June 2026. Prepaid annual
+          credits; overage billed per match. Software / API license.
         </p>
       </Section>
 
@@ -312,7 +312,7 @@ export default function IssEurope2026Page() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-sm text-text-muted flex items-center gap-2">
             <Zap className="h-4 w-4 text-brand" />
-            Flycomm · ISS World Europe 2026 · Prague · 2–4 June 2026
+            Flycomm · ECGI Coverage API · Early-Bird through 30 June 2026
           </p>
           <a
             href="https://flycomm.co"

@@ -25,7 +25,7 @@ interface ContactPayload {
   market: string;
   message: string;
   website?: string; // honeypot field — should always be empty
-  source?: string;  // campaign / page tag (e.g. "ISS Europe 2026")
+  source?: string;  // campaign / page tag (e.g. "ECGI API Early-Bird")
 }
 
 // --- Spam detection helpers ---

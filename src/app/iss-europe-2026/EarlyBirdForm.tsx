@@ -23,7 +23,7 @@ export function EarlyBirdForm() {
       market: (form.elements.namedItem("market") as HTMLSelectElement).value,
       message: (form.elements.namedItem("msg") as HTMLTextAreaElement).value,
       website: (form.elements.namedItem("website") as HTMLInputElement).value,
-      source: "ISS Europe 2026",
+      source: "ECGI API Early-Bird",
     };
 
     try {
@@ -49,9 +49,9 @@ export function EarlyBirdForm() {
   return (
     <Section id="early-bird" bg="gradient">
       <SectionHeader
-        tag="ISS Europe 2026 Exclusive"
+        tag="Limited-Time Offer"
         title="Claim Your 50% Early-Bird Access"
-        description="Reserve your ECGI batch tier at the booth. Lock in early-bird pricing — 50% off list for ISS World Europe 2026 attendees."
+        description="Reserve your ECGI batch tier. Lock in early-bird pricing — 50% off list through 30 June 2026."
       />
 
       <div className="grid gap-12 md:grid-cols-2 max-w-5xl mx-auto">
