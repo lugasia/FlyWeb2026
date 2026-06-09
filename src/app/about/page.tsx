@@ -17,20 +17,27 @@ export const metadata: Metadata = {
   },
 };
 
+const stats = [
+  { value: "50%", label: "Infrastructure Cost Savings" },
+  { value: "75%", label: "Faster Deployment" },
+  { value: "60s", label: "Network Visibility" },
+  { value: "360°", label: "Coverage Intelligence" },
+];
+
 const values = [
   {
     title: "Unprecedented Visibility",
-    desc: "We unlock the power of connectivity by providing unprecedented visibility into mobile networks — enabling clients to map and verify coverage, compare operator performance, and identify infrastructure gaps.",
+    desc: "Map and verify coverage, compare operator performance, and identify infrastructure gaps in real time.",
     icon: "Eye",
   },
   {
-    title: "AI-Powered Platform",
-    desc: "Our comprehensive network transparency platform monitors networks in real-time, offering accurate predictions across all environments, technologies, and applications anywhere in the world.",
+    title: "AI-Powered Intelligence",
+    desc: "Real-time monitoring with accurate predictions across all environments, technologies, and applications worldwide.",
     icon: "Brain",
   },
   {
     title: "Real-World Impact",
-    desc: "Save up to 50% in infrastructure costs while achieving 75% faster deployment. Turn network data into actionable intelligence that drives smarter decisions.",
+    desc: "Turn network data into actionable intelligence — saving costs, accelerating deployment, and driving smarter decisions.",
     icon: "TrendingUp",
   },
 ];
@@ -96,26 +103,55 @@ export default function AboutPage() {
         <div className="absolute inset-0 gradient-radial-tl" />
         <div className="max-w-4xl mx-auto px-5 lg:px-8 text-center relative z-10">
           <SectionTag>About Us</SectionTag>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] mt-4 mb-6">
-            Welcome to Flycomm
-          </h1>
-          <p className="text-xl md:text-2xl text-brand font-semibold font-[family-name:var(--font-space-grotesk)] mb-6">
-            The world suffers from BLINDNESS regarding wireless communication.
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] tracking-tight leading-[1.1] mt-4 mb-6">
+            We Illuminate the
             <br />
-            Flycomm SIMPLIFIES wireless communication by bringing CLARITY.
+            <span className="text-brand">Invisible Network</span>
+          </h1>
+          <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto">
+            The world suffers from blindness regarding wireless communication.
+            Flycomm brings clarity — AI-powered intelligence that reveals what
+            others simply can&apos;t see.
           </p>
-          <p className="text-lg text-text-secondary leading-relaxed max-w-3xl mx-auto">
-            Flycomm is your one-stop solution for analyzing and planning mobile
-            connectivity. We make managing and analyzing cellular connectivity
-            easy for sectors like municipalities, transportation, security, and
-            IoT. Our AI-driven technology offers clear insights into network
-            performance, helping decision-makers optimize wireless communication.
-          </p>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-14 max-w-3xl mx-auto">
+            {stats.map((s) => (
+              <div
+                key={s.label}
+                className="rounded-xl border border-border bg-bg-card/50 px-5 py-6"
+              >
+                <div className="text-3xl md:text-4xl font-bold text-brand font-[family-name:var(--font-space-grotesk)]">
+                  {s.value}
+                </div>
+                <div className="mt-2 text-xs md:text-sm text-text-secondary leading-snug">
+                  {s.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Sectors */}
+      {/* Mission */}
       <Section>
+        <SectionHeader
+          tag="Our Mission"
+          title="Turning Network Complexity into Competitive Clarity"
+        />
+        <div className="max-w-3xl mx-auto text-center space-y-5 mb-16">
+          <p className="text-lg text-text-secondary leading-relaxed">
+            Flycomm is the one-stop platform for analyzing and planning mobile
+            connectivity. We make managing cellular networks easy for
+            municipalities, transportation, security, defense, and IoT sectors.
+          </p>
+          <p className="text-lg text-text-secondary leading-relaxed">
+            Our AI-driven technology delivers clear insights into network
+            performance — helping decision-makers optimize wireless
+            communication with unprecedented precision.
+          </p>
+        </div>
+
         <div className="flex flex-wrap justify-center gap-4 mb-16">
           {sectors.map((s) => (
             <div
